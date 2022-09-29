@@ -23,12 +23,13 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 const ReactCarousel = _ref => {
   let {
-    cards
+    cards,
+    time
   } = _ref;
   const [index, setIndex] = (0, _react.useState)(0);
   const [currentTimeout, setCurrentTimeout] = (0, _react.useState)();
   const [sliderData, setSliderData] = (0, _react.useState)(cards);
-  const [intervalValue, setintervalValue] = (0, _react.useState)(5000);
+  const [intervalValue, setintervalValue] = (0, _react.useState)(time || 5000);
 
   const shiftImage = (n, m) => {
     let result = n % m; //Return a positive value
