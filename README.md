@@ -36,6 +36,8 @@ In any file that you want to call the image carousel component you will want to 
 2) import { cards } from './relative-path-where-image-data-is-stored'
 3) In your function call < ReactCarousel cards={cards} >
 
+Note: A time property has been added in and can be changed by setting time equal to a number in the thousands. The current default is 5000 milliseconds (or 5 seconds). For example, to have the carousel rotate every 3 seconds you would set time={3000} next to cards on line 7. 
+
 Explanation of cards={cards}:
 cards={} comes from the Image Carousel Component so that will never change. What will change is what is inside the curly braces here. This value is what was imported from the image data file created earlier the variable cards in that file is what was exported and now called in the curly braces here. This is important to note as you can have as many image carousels in your application as you like you will just need to create more image data files.
 
