@@ -7,6 +7,8 @@ exports.default = void 0;
 
 require("core-js/modules/web.dom-collections.iterator.js");
 
+require("core-js/modules/es.symbol.description.js");
+
 var _react = _interopRequireWildcard(require("react"));
 
 require("./ReactCarousel.css");
@@ -29,7 +31,7 @@ const ReactCarousel = _ref => {
   const [index, setIndex] = (0, _react.useState)(0);
   const [currentTimeout, setCurrentTimeout] = (0, _react.useState)();
   const [sliderData, setSliderData] = (0, _react.useState)(cards);
-  const [intervalValue, setintervalValue] = (0, _react.useState)(time || 5000);
+  const [intervalValue, setintervalValue] = (0, _react.useState)(time || 5000); // const [descriptionStylesVar, setDescriptionStylesVar] = useState("")
 
   const shiftImage = (n, m) => {
     let result = n % m; //Return a positive value
@@ -53,6 +55,10 @@ const ReactCarousel = _ref => {
     }));
   };
 
+  const descriptionStyles = () => {
+    let descriptionStylesVar = "";
+  };
+
   (0, _react.useEffect)(() => {
     if (currentTimeout) clearTimeout(currentTimeout);
     modifiedImageSliderData(index);
@@ -71,24 +77,37 @@ const ReactCarousel = _ref => {
   }, sliderData.map((item, i) => {
     const indexLeft = shiftImage(index - 1, cards.length);
     const indexRight = shiftImage(index + 1, cards.length);
-    let className = "";
+    let classNameImage = "";
 
     if (i === index) {
-      className = "card card--active";
+      classNameImage = "card card--active";
     } else if (i === indexLeft) {
-      className = "card card--left";
+      classNameImage = "card card--left";
     } else if (i === indexRight) {
-      className = "card card--right";
+      classNameImage = "card card--right";
     } else {
-      className = "card";
+      classNameImage = "card";
     }
 
-    return /*#__PURE__*/_react.default.createElement("img", {
+    let descriptionStyles = "";
+
+    if (item.description.length <= 0 || item.description === "" || item.description === null) {
+      descriptionStyles = "";
+    } else {
+      descriptionStyles = "text-description";
+    }
+
+    return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("img", {
       key: item.id,
-      className: className,
+      className: classNameImage,
       src: item.image,
       alt: "boat"
-    });
+    }), /*#__PURE__*/_react.default.createElement("div", {
+      key: item.id,
+      className: classNameImage
+    }, /*#__PURE__*/_react.default.createElement("div", {
+      className: descriptionStyles
+    }, item.description)));
   })), /*#__PURE__*/_react.default.createElement("div", {
     className: "buttons"
   }, /*#__PURE__*/_react.default.createElement("button", {

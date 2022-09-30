@@ -6,13 +6,16 @@ export const cards = [
     {
       image: boat,
       id:"1",
+      description: "",
     },
     {
       image: nightDesert,
       id:"2",
+      description: "",
     },
     {
       image: desert,
-      id:"3",    
+      id:"3",
+      description: "",
     },
   ]

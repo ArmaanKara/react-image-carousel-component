@@ -31,14 +31,14 @@
 .card--left{
     transform: translateX(-125%) scale(0.8);
     transition: 500ms;
-    opacity: 0.4;
+    opacity: 0.3;
 }
 
 .card--right{
     transform: translateX(125%) scale(0.8); 
     scale:(0.8);
     transition: 500ms;
-    opacity: 0.4;
+    opacity: 0.3;
 }
 
 .buttons{
@@ -81,4 +81,18 @@
     transform: rotate(135deg);
     -webkit-transform: rotate(135deg);
     margin-left: 4px;
-  }
+}
+
+.text-description{
+    position: absolute;
+    top: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: 25px 0px 0px 20px;
+    width: 300px;
+    border-style: solid;
+    border-width: 1.5px;
+    border-radius: 5px;
+    padding: 10px;
+}
