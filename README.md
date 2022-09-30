@@ -49,7 +49,7 @@ cards={} comes from the Image Carousel Component so that will never change. What
 ### Summary:
 - Install the component: **npm i @armaankara/react-image-carousel-component** 
 - Create an image folder in your src folder of React application
-- Create and export a variable (cards) and set it equal to an array with three objects with two key, value pairs --> image: imageName and id: "a number between 1 to 3"
+- Create and export a variable (cards) and set it equal to an array with three objects with 3 key, value pairs --> image: imageName, id: "a number between 1 to 3", and description: ""
 - Call component in the file of your choice by:
     1) import ReactCarousel from '@armaankara/react-image-carousel-component'
     2) import {cards} from './iamge-data.js'
