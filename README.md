@@ -3,16 +3,19 @@
 It is a lightweight 3 image carousel. It displays three images and rotates through them every 5 seconds and also has the ability to manually navigate through the images with the arrow buttons.
 
 ***Note - This component has it's own CSS and it is recommended that you place the component in an area where not a lot of CSS will be acting on it as it could hinder its effect. This is a standalone component that does not need additionally CSS unless of course you want to alter it in some way then expect the image carousel to not act in the way it was designed***
+![](./carouselImageExamplewithDescription.jpg)
 
-<div style="text-align:center">
+
+<!-- <div style="text-align:center">
     <img src="./react-image-carousel.gif" width=350></img>
-</div>
-
+</div> -->
 
 ## How to use the React Image Carousel?
 
 ### Installation:
 Run the bolded text here your terminal of your project **npm i @armaankara/react-image-carousel-component** 
+
+
 
 Run this in your command line. If you want to double check that the package was installed go to your package.json and look for it in dependencies there.
 
@@ -25,6 +28,8 @@ Once data file (reactImageCarouselData.js) is created this is how you should str
 As you can see at the top of the file (reactImageCarouselData.js) we have the three images imported into the file from the Images folder in the SRC. 
 Then we create and export the variable cards (you can call it whatever you like, this is just an example) and set it equal to an array with three objects.
 Inside each object we have two key, value pairs. The image key is set to the image name from the imported images above and then and id key set to a string with a number inside of it. Set up your image data file like this.
+
+**Update: Description feature has been added in, please now set up your data file like the image above with the default description set to an empty string "". If you want to describe your photo, write some text in the string and a caption below your image will appear.**
 
 ### Calling the Component
 
