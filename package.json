@@ -9,7 +9,7 @@
     "carousel",
     "slider",
     "image",
-    "image slider",
+    "image slider"
   ],
   "version": "0.1.7",
   "main": "dist/ReactCarousel,js",
