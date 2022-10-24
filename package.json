@@ -5,7 +5,11 @@
   "keywords": [
     "react",
     "components",
-    "ui"
+    "ui",
+    "carousel",
+    "slider",
+    "image",
+    "image slider",
   ],
   "version": "0.1.7",
   "main": "dist/ReactCarousel,js",

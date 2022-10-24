@@ -55,6 +55,6 @@ cards={} comes from the Image Carousel Component so that will never change. What
     2) import {cards} from './iamge-data.js'
     3) Call component ReactCarousel in function with cards={cards}
 
-
+Feel free to contact me at **akara.swe@gmail.com**
 Thank you I hope you enjoy the component and put it to good use!
 
